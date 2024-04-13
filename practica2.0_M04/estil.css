@@ -1,0 +1,99 @@
+table {
+    width: 600px; /* Establece un ancho fijo para la tabla */
+    height: 400px;
+    background-color: #f7f9fb;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 80px;
+    padding-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 6%;
+    border-radius: 10px; /* Añade bordes redondeados */
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+
+form {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #0c3b5d;
+    display: block;
+    margin-top: 0em;
+    unicode-bidi: isolate;
+}
+
+input, select, textarea {
+    background-color: #fff;
+    color: #1c1e21;
+}
+
+hr {
+    color: #0c3b5d7b;
+}
+body {
+    background-color: rgb(213, 222, 244);
+}
+
+.titulo
+    {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    COLOR: #1278BF;
+    }
+
+button {
+    border-radius: 3px;
+}
+
+.inputs {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 250px;
+}
+
+.button_primary {
+    padding: 10px;
+    background-color: #0c3b5d;
+    margin: 5px 0;
+    color: #e1eaf1;
+    border: 1px solid #6e75fc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 250px;
+}
+
+.button_secundary {
+    padding: 10px;
+    background-color: #b47011;
+    margin: 5px 0;
+    color: #ffffff;
+    border: 1px solid #b47011;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 250px;
+}
+
+.button_secundary:hover {
+    background-color: #d7902c;
+    border: 1px solid #d7902c;
+    cursor: pointer;
+}
+
+.button_primary:hover {
+    background-color: #135090;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #9ebed3;
+    text-align: center;
+    align-self: flex-end;
+    width: 100%;
+    margin-top: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
