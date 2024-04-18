@@ -26,8 +26,6 @@ session_start();
                 <input type="text" name="name" placeholder="Escriu el teu nom" class="inputs"><br>
                 <input type="password" name="psswd" placeholder="Introdueix contrasenya" class="inputs"><br><br>
                 <button type="submit" class="button_primary">Iniciar sessió</button>
-                <br><br><hr><br>
-                <button type="submit" class="button_secundary">Registrar-se</button>
             </form></td>
         </table>
         <div>
