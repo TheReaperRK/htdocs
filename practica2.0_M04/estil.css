@@ -66,12 +66,12 @@ button {
     width: 250px;
 }
 
-.button_secundary {
+.logOut {
     padding: 10px;
-    background-color: #b47011;
+    background-color: #0c5d2c;
     margin: 5px 0;
-    color: #ffffff;
-    border: 1px solid #b47011;
+    color: #e1eaf1;
+    border: 1px solid #038035;
     border-radius: 5px;
     font-size: 16px;
     width: 250px;

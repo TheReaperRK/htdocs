@@ -11,9 +11,9 @@ session_start();
 <body>
 
 <header>
-    <p>¡Bienvenido!, <?php echo $_SESSION['name']; ?></p>
+    <p2>¡Bienvenido!, <?php echo $_SESSION['name']; ?></p2>
     <form method="POST" action="inici.php">
-        <input type="submit" name="tancar_sessio" value="Cerrar Sesión">
+        <input class="logOut" type="submit" name="tancar_sessio" value="Cerrar Sesión">
     </form>
 </header>
 
