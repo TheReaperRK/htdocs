@@ -27,9 +27,9 @@ session_start();
             <h2 class="titulo">¡Bienvenido a la solucitud de camisetas!</h2>
             <form action="formulari.php" method="POST">
 
-            Correo electrónico: <input type="text" name="email"><br>
+            Introdueix el correu: <input type="text" name="email" class="inputsForm"><br>
 
-            Fecha: <input type="date" name="data"><br>
+            Fecha: <input type="date" name="data" class="inputsForm"><br>
 
             <p>Seleciona una equipación:</p>
 
@@ -44,6 +44,16 @@ session_start();
             <input class="opcionC" type="checkbox" name="opcions[]" value="opcio3"> Atletico de Madrid<br>
             <input class="opcionC" type="checkbox" name="opcions[]" value="opcio4"> Valencia CF<br>
             <input class="opcionC" type="checkbox" name="opcions[]" value="opcio5"> Granada FC<br><br>
+
+            <p>Com vols salvar a la princesa?</p>
+
+            <select class="inputsForm" name="opcionsD[]" multiple>
+                <option value="opcio1">Amb corda</option>
+                <option value="opcio2">Amb una conversació</option>
+                <option value="opcio3">Amb uns llençols</option>
+                <option value="opcio4">Lluitant amb el drac</option>
+            </select><br><br>
+
             <input class="button_primary" type="submit" value="Enviar">
         </td>
     </table>
