@@ -21,7 +21,7 @@ if(isset($_POST['tancar_sessio'])) {
         <title>index</title>
     </head>
     <body>
-        <table id="formulari">
+        <table id="formulariLogin">
             <td>
                 <h2 class="titulo">Inici de sessió</h2>
                     <?php

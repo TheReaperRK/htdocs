@@ -23,8 +23,7 @@ session_start();
 
     <table id="formulari">
         <td>
-
-            <h2 class="titulo">¡Bienvenido a la solucitud de camisetas!</h2>
+            <h2 class="titulo">La princesa està en perill !</h2>
             <form action="formulari.php" method="POST">
 
             Introdueix el correu: <input type="text" name="email" class="inputsForm"><br>
