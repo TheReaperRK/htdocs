@@ -15,7 +15,7 @@ session_start();
         <td>
             <p2>Benvingut, <?php echo $_SESSION['name']; ?></p2>
             <form method="POST" action="inici.php">
-            <input class="logOut" type="submit" name="tancar_sessio" value="Cerrar Sesión">
+            <input class="logOut" type="submit" name="tancar_sessio" value="Tancar Sessió">
             </form>
         </td>
     </table>
