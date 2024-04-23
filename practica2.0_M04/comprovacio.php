@@ -11,7 +11,7 @@ if ($_SESSION['name'] === 'carlos' && $_SESSION['psswd'] === '12345') {
     exit();
 } else {
     // Si no son correctos defines al variable error
-    $_SESSION['error_message'] = "Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.";
+    $_SESSION['error_message'] = "Usuari o contrasenya incorrectes. Si us plau, intenta-ho de nou.";
     // vuelves al formulario
     header("Location: inici.php");
     exit();
