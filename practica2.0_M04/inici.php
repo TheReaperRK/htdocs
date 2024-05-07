@@ -27,7 +27,7 @@ if(isset($_POST['tancar_sessio'])) {
                     <?php
                     // Muestra el mensaje de error si existe
                     if (isset($_SESSION['error_message'])) {
-                        echo "<p id='error'>".$_SESSION['error_message']."</p>";
+                        echo "<p class='error'>".$_SESSION['error_message']."</p>";
                          // Limpia el mensaje de error después de mostrarlo
                         unset($_SESSION["error_message"]);
                     //} else {

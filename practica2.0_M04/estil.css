@@ -152,7 +152,21 @@ p2 {
     text-align: center;
 }
 
-#error {
+.error {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: red;
+    color: rgb(251, 36, 36);
+    padding: 2%;
+    font-size: 12px;
+    margin: 0px;
+    margin-left: 3px;
+}
+
+.error_message {
+    margin-top: 0px;
+    background-color: rgb(246, 197, 197);
+    border-width: 2px;
+    width: 250px;
+    height: 30px;
+    border-color: rgb(255, 122, 122);
+    border-radius: 5px;
 }
