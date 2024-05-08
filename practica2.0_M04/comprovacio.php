@@ -16,4 +16,6 @@ if ($_SESSION['name'] === 'carlos' && $_SESSION['psswd'] === '12345') {
     header("Location: inici.php");
     exit();
 }
+
+
 ?>

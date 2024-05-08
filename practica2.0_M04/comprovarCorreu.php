@@ -2,33 +2,39 @@
 session_start();
 
 // Función para validar el correo electrónico
-function validarCorreo($correo) {
-    return filter_var($correo, FILTER_VALIDATE_EMAIL);
+$email = $_POST["email"];
+if (isset($_POST['tancar_sessio'])) {
+    tancarSessio();
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Verificar si se ha ingresado un correo electrónico válido
-    if(isset($_POST['email']) && validarCorreo($_POST['email'])) {
-        // El correo es válido, puedes procesar los datos aquí
-        // Por ejemplo, podrías almacenarlos en variables o en una base de datos
+procesarFormulario($email);
+function procesarFormulario($email) {
 
-        // También puedes acceder a otros campos del formulario, como la fecha y las opciones seleccionadas
-        $correo = $_POST['email'];
-        $fecha = $_POST['data'];
-        $opcion = $_POST['opcion'];
-        $armas = $_POST['opcions']; // Array de armas seleccionadas
-        $salvamento = $_POST['opcionsD']; // Array de formas de salvar a la princesa
+    $_SESSION['email'] = $_POST['email'] ?? '';
+    $_SESSION['data'] = $_POST['data'] ?? '';
+    $_SESSION['opcio'] = $_POST['opcio'] ?? '';
+    $_SESSION['opcions'] = $_POST['opcions'] ?? [];
+    $_SESSION['opcionsD'] = $_POST['opcionsD'] ?? null;
 
-        // Realizar otras operaciones necesarias, como almacenar en la base de datos, enviar correos electrónicos, etc.
-
-        // Redireccionar a una página de éxito o cualquier otra página necesaria
-        header("Location: final.php");
+    if (!verificarCorreu($email)) {
+        $_SESSION['error_message'] = "L'adreça no és correcte";
+        header("Location: formulari.php");
         exit();
     } else {
-        // El correo electrónico no es válido, establecer un mensaje de error y redirigir de vuelta al formulario
-        $_SESSION['error_message'] = "El correo electrónico no es válido.";
-        header("Location: formulari.php");
+        header("Location: final.php");
         exit();
     }
 }
+
+function verificarCorreu($email) {
+    return substr_count($email, "@") === 1 && substr_count($email, ".") === 1;
+}
+
+function tancarSessio() {
+    session_start();
+    header("Location: acomiadament.php");
+    $_SESSION['nombreAux'] = $_SESSION['name'];
+    exit();
+}
+
 ?>
