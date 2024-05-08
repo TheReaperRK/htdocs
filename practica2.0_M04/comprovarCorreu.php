@@ -4,7 +4,10 @@ session_start();
 // Función para validar el correo electrónico
 $email = $_POST["email"];
 if (isset($_POST['tancar_sessio'])) {
-    tancarSessio();
+    session_start();
+    header("Location: acomiadament.php");
+    $_SESSION['nombreAux'] = $_SESSION['name'];
+    exit();
 }
 
 procesarFormulario($email);
@@ -31,10 +34,9 @@ function verificarCorreu($email) {
 }
 
 function tancarSessio() {
-    session_start();
-    header("Location: acomiadament.php");
-    $_SESSION['nombreAux'] = $_SESSION['name'];
-    exit();
+    session_unset();
+    session_destroy();
+    exit;
 }
 
 ?>

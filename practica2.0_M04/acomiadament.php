@@ -6,9 +6,7 @@ if (isset($_SESSION['nombreAux'])) {
 }
 
 if(isset($_POST['tancar_sessio'])) {
-    session_unset();
-    session_destroy();
-    exit;
+    tancarSessio();
 }
 ?>
 
