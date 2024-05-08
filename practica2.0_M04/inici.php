@@ -1,17 +1,5 @@
 <?php
 session_start();
-
-// Verificar si se ha enviado el formulario y se ha solicitado cerrar la sesión
-if(isset($_POST['tancar_sessio'])) {
-    //destruir las variables de la sesión
-    session_unset();
-    //destruir la sesión
-    session_destroy();
-
-    //// Redirigir al usuario a la página de inicio de sesión
-    header("location: inici.php");
-    exit;
-}
 ?>
 
 <!DOCTYPE html>
