@@ -14,7 +14,7 @@ session_start();
     <table id="logout">
         <td>
             <p2>Benvingut, <?php echo $_SESSION['name']; ?></p2>
-            <form method="POST" action="comprovarCorreu.php">
+            <form method="POST" action="funcions.php">
             <input class="logOut" type="submit" name="tancar_sessio" value="Tancar Sessió">
             </form>
         </td>
@@ -25,7 +25,7 @@ session_start();
         <td>
             
             <h2 class="titulo">¡La princesa està en perill!</h2>
-            <form action="comprovarCorreu.php" method="POST">
+            <form action="funcions.php" method="POST">
 
             Introdueix el correu:<input type="text" name="email" class="inputsForm" value="<?= htmlspecialchars($data['email'] ?? '') ?>">
             

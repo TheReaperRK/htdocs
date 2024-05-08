@@ -1,11 +1,8 @@
 <?php
-session_start();
+include "funcions.php";
 
 if (isset($_SESSION['nombreAux'])) {
-    $name = $_SESSION['nombreAux'];
-}
-
-if(isset($_POST['tancar_sessio'])) {
+    $name = $_SESSION['nombreAux']; //ho guardo a una variable per que no es perdi en tancar la sessió
     tancarSessio();
 }
 ?>

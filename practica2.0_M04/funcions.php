@@ -1,17 +1,18 @@
 <?php
 session_start();
 
-// Función para validar el correo electrónico
-$email = $_POST["email"];
+
 if (isset($_POST['tancar_sessio'])) {
-    session_start();
     header("Location: acomiadament.php");
     $_SESSION['nombreAux'] = $_SESSION['name'];
     exit();
 }
 
-procesarFormulario($email);
-function procesarFormulario($email) {
+if (isset($_POST['email'])){
+    $email = $_POST["email"];
+    procesarFormulario($email);
+}
+function procesarFormulario($email) { //dono els valors del post a les diferents opcions
 
     $_SESSION['email'] = $_POST['email'] ?? '';
     $_SESSION['data'] = $_POST['data'] ?? '';
@@ -19,7 +20,7 @@ function procesarFormulario($email) {
     $_SESSION['opcions'] = $_POST['opcions'] ?? [];
     $_SESSION['opcionsD'] = $_POST['opcionsD'] ?? null;
 
-    if (!verificarCorreu($email)) {
+    if (!verificarCorreu($email)) { //metode per redirigir en funcio de si es correcte o no
         $_SESSION['error_message'] = "L'adreça no és correcte";
         header("Location: formulari.php");
         exit();
@@ -36,7 +37,5 @@ function verificarCorreu($email) {
 function tancarSessio() {
     session_unset();
     session_destroy();
-    exit;
 }
-
 ?>

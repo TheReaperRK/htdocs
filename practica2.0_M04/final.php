@@ -49,7 +49,7 @@ if (isset($_SESSION['email'])) {
                         echo "<p2>Benvingut, " . $_SESSION['name'] . "</p2>";
                     }
                 ?>
-                <form method="POST" action="comprovarCorreu.php">
+                <form method="POST" action="funcions.php">
                     <input class="logOut" type="submit" name="tancar_sessio" value="Tancar Sessió">
                 </form>
             </td>
