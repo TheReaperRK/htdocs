@@ -7,7 +7,7 @@ $_SESSION['psswd'] = $_POST['psswd'];
 if ($_SESSION['name'] === 'carlos' && $_SESSION['psswd'] === '12345') {
     // redirigir a la pagina buena
 
-    header("Location: formulari.php");
+    header("Location: mercat.php");
     exit();
 } else {
     // Si no son correctos defines al variable error
